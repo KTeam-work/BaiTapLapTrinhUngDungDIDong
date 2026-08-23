@@ -2,10 +2,9 @@ import 'dart:io';
 void main(){
     stdout.write('Nhập số lượng que kem cần mua(>0): ');
     int n = int.parse(stdin.readLineSync()!);
-
     if(n <= 0){ // Kiểm tra đk
-       print('Số lượng que kem phải lớn hơn 0!');
-       return;
+        print('Số lượng que kem phải lớn hơn 0!');
+        return;
     }
 
     stdout.write('Nhập giá tiền của 1 que kem: ');

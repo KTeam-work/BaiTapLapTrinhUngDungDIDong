@@ -1,9 +1,3 @@
-// Bài tập 2. Hãy viết chương trình thực hiện các yêu cầu sau:
-// a. Nhập vào 1 chuỗi và xuất chuỗi đó ra màn hình
-// b. Cho biết chuỗi có bao nhiêu kí tự là nguyên âm?
-// c. Cho biết chuỗi có bao nhiêu từ?
-// d. Cho biết chuỗi có đối xứng hay không?
-// e. Đảo ngược từ trong chuỗi. Ví dụ: Bò ăn cỏ ➔ cỏ ăn Bò
 
 import 'dart:io';
 
