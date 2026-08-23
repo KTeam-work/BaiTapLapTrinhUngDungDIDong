@@ -19,13 +19,15 @@ bool CheckDoiXung(List<int> ds){
 
 bool CheckTangDan(List<int> ds){
   if(ds.isEmpty) return false;
+
+  if(ds.length <= 1) return true;
       
-      for(int i =0; i <= ds.length - 1;i++){ // kiểm tra số sau nó, nó có lớn không, nếu có thì trả về false
-        if(ds[i] > ds[i+1]){
-          return false;
-        }
-      }
-      return true;
+  for(int i =0; i < ds.length - 1;i++){ // kiểm tra số sau nó, nó có lớn không, nếu có thì trả về false
+    if(ds[i] > ds[i+1]){
+        return false;
+    }
+  }
+  return true;
 }
 
 void main(){
