@@ -10,11 +10,15 @@ void main(){
     stdout.write('Nhập giá tiền của 1 que kem: ');
     double money = double.parse(stdin.readLineSync()!);
 
-    if(money <= 0){
+    if(money <= 0){  // Kiểm tra Tiền 
        print('Tiền phải lớn > 0!');
        return;
     }
+
+
     double tongtien = 0;
+    
+    // Tính Tổng Tiền
     if(n > 10){
         tongtien = (n * money) - ((n * money) * 0.10);
     }else if(n >= 5){

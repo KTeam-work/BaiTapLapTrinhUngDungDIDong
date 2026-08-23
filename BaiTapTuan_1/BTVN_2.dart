@@ -11,7 +11,9 @@ void main(){
   // b. Cho biết chuỗi có bao nhiêu kí tự là nguyên âm?
   List<String> nguyenAm = ['a', 'e', 'i', 'o', 'u'];
   List<String> dschuoi = chuoi.toLowerCase().split('');
-  int soNguyenAm = dschuoi.where((t) => nguyenAm.contains(t)).toList().length;
+
+  // kiểm tra xem trong dschuoi có phần từ nào thuộc nguyenam không
+  int soNguyenAm = dschuoi.where((t) => nguyenAm.contains(t)).toList().length; 
   
   if(soNguyenAm == 0){
     print("Không có ký tự nguyên âm");
@@ -20,7 +22,7 @@ void main(){
   }
 
   // c. Cho biết chuỗi có bao nhiêu từ?
-  List<String> dsTu =  chuoi.trim().split(' ');
+  List<String> dsTu =  chuoi.trim().split(' '); 
   int Tu = dsTu.length;
   print("Có $Tu từ!\n");
 

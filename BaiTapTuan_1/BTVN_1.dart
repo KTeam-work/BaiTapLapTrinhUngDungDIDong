@@ -2,13 +2,13 @@
 import 'dart:math';
 import 'dart:io';
 
-
+// Hàm kiểm tra đối xứng
 bool CheckDoiXung(List<int> ds){
-    if(ds.isEmpty) return false;
+    if(ds.isEmpty) return false; // kiểm tra rỗng
     
     for(int i =0; i < ds.length/2;i++){
-      if(ds[i] != ds[ds.length-i - 1]){
-        return false;
+      if(ds[i] != ds[ds.length-i - 1]){  // So sánh giữa 2 vị trí từ đầu đi về sau và từ sau về đầu
+        return false; // nếu khác thì trả về false
       }
     }
     return true;
@@ -20,8 +20,8 @@ bool CheckDoiXung(List<int> ds){
 bool CheckTangDan(List<int> ds){
   if(ds.isEmpty) return false;
       
-      for(int i =0; i <= ds.length - 1;i++){
-        if(ds[i] != ds[i+1]){
+      for(int i =0; i <= ds.length - 1;i++){ // kiểm tra số sau nó, nó có lớn không, nếu có thì trả về false
+        if(ds[i] > ds[i+1]){
           return false;
         }
       }
@@ -86,7 +86,7 @@ void main(){
   int giatri = int.parse(stdin.readLineSync()!);
 
   if(ds.contains(giatri)){
-       ds.removeWhere((t)=> t == giatri);
+       ds.removeWhere((t)=> t == giatri); // xóa giá trị cần tìm ở trong danh sách
        print("Danh sách còn lại: $ds");
   }else{
     print("Không tìm thấy giá trị trong danh sách");
