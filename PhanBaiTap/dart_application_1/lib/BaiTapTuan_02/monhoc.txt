@@ -1,0 +1,5 @@
+LT|CS401|Cấu trúc dữ liệu|3|8.5|7.5
+TH|CS402|Lập trình C#|2|9.0|8.0|8.5
+DA|CS403|Đồ án cơ sở dữ liệu|4|9.5|9.0
+LT|CS404|Giải thuật nâng cao|3|7.0|8.0
+TH|CS405|Mạng máy tính|2|8.0|7.5|9.0
