@@ -33,7 +33,7 @@ class PhongA extends PhongThue {
   ) : super(maPhong, soNguoi, soDien, soNuoc);
 
   @override
-  double tinhTienPhong() {
+  double tinhTienPhong() {  // Tính tiền phòng
     return 1400.0 +
         2 * soDien +
         8 * soNuoc +
@@ -80,14 +80,7 @@ class PhongB extends PhongThue {
   @override
   void hienThi() {
     print(
-      'Loại B | '
-      'Mã phòng: $maPhong | '
-      'Số người: $soNguoi | '
-      'Số điện: $soDien | '
-      'Số nước: $soNuoc | '
-      'Giặt ủi: $giatui | '
-      'Số máy: $soMay | '
-      'Tiền phòng: ${tinhTienPhong()}',
+      'Loại B | ' 'Mã phòng: $maPhong | ''Số người: $soNguoi | ''Số điện: $soDien | ''Số nước: $soNuoc | ''Giặt ủi: $giatui | ''Số máy: $soMay | ''Tiền phòng: ${tinhTienPhong()}',
     );
   }
 }
@@ -151,55 +144,4 @@ List<PhongThue> docDanhSachPhong(String tenFile) {
   }
 
   return danhSach;
-}
-
-void main() {
-  // Đọc danh sách phòng từ file
-  List<PhongThue> danhSach = docDanhSachPhong('phongthue.txt');
-
-  // 1. In thông tin tất cả các phòng
-  print('========== DANH SÁCH PHÒNG THUÊ ==========');
-
-  for (PhongThue phong in danhSach) {
-    phong.hienThi();
-  }
-
-  // 2. In các phòng có số người thuê lớn hơn 2
-  print('\n========== PHÒNG CÓ SỐ NGƯỜI > 2 ==========');
-
-  for (PhongThue phong in danhSach) {
-    if (phong.soNguoi > 2) {
-      phong.hienThi();
-    }
-  }
-
-  // 3. Tính tổng tiền phòng
-  double tongTien = 0;
-
-  for (PhongThue phong in danhSach) {
-    tongTien += phong.tinhTienPhong();
-  }
-
-  print('\n========== TỔNG TIỀN PHÒNG ==========');
-  print('Tổng tiền phòng: $tongTien');
-
-  // 4. Sắp xếp giảm dần theo số điện tiêu thụ
-  danhSach.sort(
-    (a, b) => b.soDien.compareTo(a.soDien),
-  );
-
-  print('\n========== SẮP XẾP GIẢM DẦN THEO SỐ ĐIỆN ==========');
-
-  for (PhongThue phong in danhSach) {
-    phong.hienThi();
-  }
-
-  // 5. In danh sách phòng loại A
-  print('\n========== DANH SÁCH PHÒNG LOẠI A ==========');
-
-  for (PhongThue phong in danhSach) {
-    if (phong is PhongA) {
-      phong.hienThi();
-    }
-  }
 }
