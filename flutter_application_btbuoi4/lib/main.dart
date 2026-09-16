@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_btbuoi3/text_demo.dart';
-import 'package:flutter_application_btbuoi3/bai_tap_o_lop/Bai_1/thong_tin_sinh_vien1.dart';
-// import 'package:flutter_application_btbuoi3/bai_tap_o_lop/Bai_1/thong_tin_sinh_vien2.dart';
-import 'package:flutter_application_btbuoi3/bai_tap_o_lop/bai_2/detai.dart';
-import 'package:flutter_application_btbuoi3/bai_tap_o_lop/bai_3/sanpham.dart';
-import 'package:flutter_application_btbuoi3/bai_tap_ve_nha/bai_4//nhom.dart';
-import 'package:flutter_application_btbuoi3/bai_tap_ve_nha/bai_5/nganhhoc.dart';
+import 'package:flutter_application_btbuoi4/layout_demo.dart';
+import 'package:flutter_application_btbuoi4/bai_tap_lop/bai_tap_3.dart';
+import 'package:flutter_application_btbuoi4/bai_tap_ve_nha/bai_tap_4.dart';
+import 'package:flutter_application_btbuoi4/bai_tap_ve_nha/bai_tap_5.dart';
+
+import 'package:flutter_application_btbuoi4/bai_tap_ve_nha/bai_tap_6.dart';
+import 'package:flutter_application_btbuoi4/bai_tap_lop//bai_tap_1.dart';
+import 'package:flutter_application_btbuoi4/bai_tap_lop//bai_tap_2.dart';
 
 void main() {
-  runApp(const Nhom());
-} 
+  runApp(const gioithieu());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
